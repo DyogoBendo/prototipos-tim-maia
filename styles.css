@@ -1,0 +1,533 @@
+body{
+    position: relative;
+}
+
+/* Estilizando o menu de navegação (Não escondido)*/
+
+#menu{
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    height: 100vh;
+    width: 14vw;
+
+    background-color: var(--bg-menu);
+
+    display: flex;
+    flex-direction: column;
+
+    
+    align-items: center;
+
+    z-index: 1;
+}
+
+/* Estilizando o header do menu */
+#menu .menu-header{
+    display: flex;
+
+    width: 90%;
+
+    margin: 3rem 2rem 8rem;
+
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+}
+#menu .menu-header::after{
+    content: "";
+    
+
+    position: absolute;
+
+    margin-top: 3rem;
+
+    left: 0;
+    top: 100%;
+
+    width: 100%;
+    height: 0.125rem;
+
+    background-color: var(--border-color);
+}
+#menu .menu-header .logo-area{
+    height: 8rem;
+    width: 10rem;
+
+    padding-right: 1rem;
+}
+#menu .menu-header .logo-area #logo{
+    width: 100%;
+    height: 100%;
+
+    
+}
+#menu .menu-header .logo-title{
+    height: 8rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#menu .menu-header .logo-title h1{
+    font-size: 3rem;
+}
+/* ******************************* */
+
+/* Estilizando as opções de navegação (links) */
+#menu .routes-links{
+    height: 40rem;
+    width: 88%;
+
+    margin: 2rem 4rem 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#menu .routes-links .route-link{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    width: 100%;
+
+    height: 8rem;
+
+    text-decoration: none;
+
+    color: var(--text-color-darker);
+    font-size: 2.2rem;
+
+    padding-left: 2rem;
+
+    border-radius: 1rem;
+
+}
+#menu .routes-links .route-link:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+
+    transition: .2s ease-in-out;
+}
+#menu .routes-links .route-link .icon-route{
+    width: 3.8rem;
+    height: 3.8rem;
+
+    stroke-width: 0.125rem;
+}
+#menu .routes-links .route-link h3{
+    margin-left: 2rem; 
+
+    font-weight: 500;
+}
+/* ****************************************** */
+/* Estilizando o footer do menu */
+#menu .visible-icon-area{
+    margin-top: 10rem;
+}
+#menu .visible-icon-area #visible-menu{
+    background-color: transparent;
+
+    border: none;
+
+    width: 8rem;
+    height: 8rem;
+
+    border-radius: 1rem;
+
+    position: relative;
+}
+#menu .visible-icon-area #visible-menu .icon-visible{
+    width: 4rem;
+    height: 4rem;
+
+    stroke-width: 0.125rem;
+}
+#menu.hide .visible-icon-area #visible-menu .icon-visible{
+    transform: rotate(180deg);
+}
+#menu .visible-icon-area #visible-menu:hover,
+#menu .visible-icon-area #visible-menu:focus{
+    background-color: rgba(255, 255, 255, 0.2);
+
+    transition: .2s ease-in-out;
+} 
+/* Estilizando o menu no modo hide */
+#menu.hide{
+    width: 5vw;
+}
+
+#menu.hide .menu-header .logo-title{
+    display: none;
+}
+
+#menu.hide .routes-links .route-link{
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+}
+
+#menu.hide .routes-links .route-link h3{
+    display: none;
+}
+    
+/* ******************************* */  
+/* **************************** */
+
+/* Estilizando a opção de filtros */
+#filter-options.minimize {
+    height: 10rem;
+    width: 32rem;
+}
+#filter-options.minimize .chapters-content,
+#filter-options.minimize .region-content,
+#filter-options.minimize .start-chapter{
+    display: none;
+}
+#filter-options.minimize .tab-content-links{
+    border: none;
+
+    width: 100%;
+}
+#filter-options.minimize .tab-content-links .tabs-link{
+    height: 5rem;
+
+    font-size: 2.4rem;
+}
+#filter-options.minimize .tab-content-links .tabs-link.activate{
+    font-weight: normal;
+    background-color: var(--bg-menu);
+}
+
+#filter-options{
+    position: absolute;
+
+    right: 2vw;
+    top: 4vh;
+
+    width: 38rem;
+    height: 58rem;
+
+    background-color: var(--bg-menu);
+
+    border-radius: 1rem;
+
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+#filter-options .minimize-area{
+    width: 100%;
+
+    height: 3.2rem;
+
+    padding: 1rem 1rem 0 0;
+
+    display: flex;
+    justify-content: flex-end;
+
+
+}
+#filter-options .minimize-area #minimize-search{
+    border: none;
+
+    background: transparent;
+    border-radius: 1rem;
+
+    width: 4rem;
+    height: 2rem;
+
+    transition: .2s ease-in-out;
+}
+#filter-options .minimize-area #minimize-search svg{
+    stroke-width: 00.125rem;
+
+    width: 2rem;
+    height: 2rem;
+}
+
+#filter-options .minimize-area #minimize-search:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#filter-options .tab-content-links{
+    width: 92%;
+    height: 9.2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: var(--border-color) 0.25rem solid;   
+}
+#filter-options .tab-content-links .contents-links{
+    display: flex;
+    justify-content: space-between;
+
+    width: 90%; 
+}
+#filter-options .tab-content-links .tabs-link.activate{
+    font-weight: bold;
+
+    background-color: rgba(255, 255, 255, 0.2);
+}
+#filter-options .tab-content-links .tabs-link{
+    display: flex;
+
+    border: none;
+    background-color: transparent;
+
+    font-size: 2.6rem;
+
+    font-weight: 100;
+    
+    width: 16rem;
+    height: 6rem;
+
+    align-items: center;
+    justify-content: center;
+
+    transition: .2s ease-in-out;
+}
+#filter-options .tab-content-links .tabs-link:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+#filter-options .tab-content-links .division-line{
+    width: 0.125rem;
+
+    height: 60%;
+    
+    background-color: var(--border-color);
+}
+
+/* ****************************** */
+
+/* Estilizando os capitulos */
+#filter-options .chapters-content {
+    display: none;
+}
+#filter-options .chapters-content.activate{
+    display: flex;
+    flex-direction: column;
+
+    width: 92%;
+
+    margin: 4rem;
+
+    justify-content: space-between;
+
+    overflow-y: scroll;
+}
+#filter-options .chapters-content::-webkit-scrollbar{
+    width: 1.5rem;
+}
+
+#filter-options .chapters-content::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    
+    background-color: var(--scroll-color);
+}
+#filter-options .chapters-content .continent-group:not(:first-child){
+    margin: 4rem 0 0 0;
+}
+
+#filter-options .chapters-content .continent-group .continent-title{
+    color: var(--text-color-lighter);
+
+    font-size: 2.4rem;
+
+    padding-bottom: 1.6rem;
+}
+#filter-options .chapters-content .continent-group .regions{
+    line-height: 4rem;
+}
+#filter-options .chapters-content .continent-group .regions .region{
+    font-size: 2.2rem;
+    transition: .2s ease-in-out;
+
+    border-radius: 1rem;
+    padding-left: 2rem;
+
+    margin-right: 1rem;
+}
+#filter-options .chapters-content .continent-group .regions .region.choosed{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+#filter-options .chapters-content .continent-group .regions .region.choosed:hover{
+    background: transparent;
+}
+#filter-options .chapters-content .continent-group .regions .region:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+    
+/* ************************ */
+/* Estilizando o preview das regiões */
+#filter-options .region-content{
+    display: none;
+}
+#filter-options .region-content.activate {
+    width: 92%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+}
+#filter-options .region-content .region-header {
+    margin-top: 4rem;
+
+    display: flex;
+    flex-direction: column;
+}
+#filter-options .region-content .region-header::after{
+    content: "";
+
+    width: 90%;
+    height: 0.125rem;
+
+    margin-top: 2rem;
+
+    background-color: var(--border-color);
+}
+#filter-options .region-content .region-header .region-slide{
+    display: flex;
+    justify-content: center;
+    
+    width: 100%;
+}
+#filter-options .region-content .region-header .region-slide .region-image{
+    width: 92%;
+
+    margin-bottom: 2rem;
+}
+#filter-options .region-content .region-header .region-title{
+    font-size: 3rem;
+
+    margin-left: 1.4rem;
+}
+#filter-options .region-content .region-specific {
+    padding: 2rem 0;
+
+    height: 100%;
+    width: 100%;
+}
+#filter-options .region-content .region-specific .specific-list{
+    line-height: 3.2rem;
+    margin-left: 2.4rem;
+    font-size: 2rem;
+}
+#filter-options .start-chapter{
+    position: absolute;
+
+    right: 0vw;
+    top: 64vh;
+
+    width: 38rem;
+    height: 7rem;
+    
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+
+    border-radius: 1rem;
+    border: none;
+
+    background-color: var(--scroll-color);
+    transition: .8s ease-in-out;
+}
+#filter-options .start-chapter:hover{
+    background-color:  var(--scroll-color-dark);
+}
+
+#filter-options .start-chapter span{
+    width: 80%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 3.2rem;
+    color: var(--border-color-lighter);
+
+    border-right: solid 0.125rem var(--border-color-lighter)
+}
+
+#filter-options .start-chapter .start-icon-area{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 20%;
+    height: 100%;
+}
+#filter-options .start-chapter .start-icon-area svg{
+    stroke: var(--border-color-lighter);
+}
+ 
+
+
+/* ********************************* */
+
+/* Estilizando a área de zoom */
+
+#zoom-area{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    position: fixed;
+    right: 2vw;
+    top: 94vh;
+
+    z-index: 2;
+
+    border-radius: 2.6rem;
+    background-color: var(--bg-menu);
+
+    width: 10rem;
+}
+#zoom-area .option{
+    border: none;
+    background-color: transparent;
+
+    padding: 0.25rem;
+
+    width: 50%;
+    height: 50%;
+}
+#zoom-area .option svg{
+    stroke-width: 0.125rem;
+}
+#zoom-area .option:first-of-type{
+    border-right: solid 0.125rem var(--border-color);
+
+    padding-right: 1rem;
+}
+
+/* ************************** */
+/* ******************************* */
+
+/* Estilizando a área do mapa mundi */
+
+#worldmap{
+    width: 98vw;
+    height: 98vh;
+}
+#worldmap iframe{
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+}
+
+
+/* ******************************** */

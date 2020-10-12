@@ -1,0 +1,38 @@
+body{
+    overflow: hidden;
+}
+#worldmap-area{
+    width: 150vw;
+    height: 150vh;
+}
+#worldmap-area #map{
+    width: 100%;
+    height: 100%;
+}
+#worldmap-area #map #world .land{
+    stroke: var(--border-color);
+    stroke-width: 0.125rem;
+
+    transition: .8s ease-in-out;
+
+    fill: transparent;
+}
+#worldmap-area #map #world .land{
+    transition: .8s ease-in-out;
+
+    fill: transparent;
+}
+#worldmap-area #map #world .land:hover{
+    fill: var(--bg-menu);
+}
+#worldmap-area #map #world .clickable:hover{
+    fill: var(--scroll-color);
+}
+#worldmap-area #map #world .clickable .land:hover{
+    fill: var(--scroll-color);
+    cursor: initial;
+}
+#worldmap-area #map #world .clickable:hover{
+    fill: var(--scroll-color);
+}
+

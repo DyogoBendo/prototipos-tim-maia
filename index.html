@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./static/styles/global.css">
+    <link rel="stylesheet" href="./styles.css">
+
+    <title>Protótipo Apresentação</title>
+</head>
+<body>
+    <nav id="menu">
+        <header class="menu-header">
+            <div class="logo-area">
+                <img src="./assets/images/icons/globalang-smaller.svg" alt="Logo" id="logo">
+            </div>
+            <div class="logo-title">
+                <h1>GlobaLang</h1>
+            </div>
+        </header>
+        <section class="routes-links">
+            <a href="#" class="route-link" id="tutorial">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"  class="icon-route"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+
+                <h3>Tutorial</h3>
+            </a>
+            <a href="#" class="route-link" id="summaries">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"  class="icon-route"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+
+                <h3>Summaries</h3>
+            </a>
+            <a href="#" class="route-link" id="about-us">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-route"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+
+                <h3>About us</h3>
+            </a>
+            <a href="#" class="route-link" id="settings">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"  class="icon-route"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+
+                <h3>Settings</h3>
+            </a>
+        </section>
+        <footer class="visible-icon-area">
+            <button id="visible-menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-visible"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            </button>
+        </footer>
+    </nav>
+    <main id="worldmap">
+        <iframe src="./worldmap/worldmap.html" frameborder="0"></iframe>
+    </main>
+    <aside id="filter-options" class="">
+        <header class="minimize-area">
+            <button id="minimize-search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minimize-2"><polyline points="4 14 10 14 10 20"></polyline><polyline points="20 10 14 10 14 4"></polyline><line x1="14" y1="10" x2="21" y2="3"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
+            </button>
+        </header>
+        <section class="tab-content-links">
+            <button class="tabs-link activate" id="chapter-button">Chapters</button>
+            <div class="division-line">&nbsp;</div>
+            <button class="tabs-link" id="preview-button">Preview</button>
+        </section>
+        <section class="chapters-content activate" data-button="chapter-button">
+            <div class="continent-group">
+                <h3 class="continent-title">Africa</h3>
+                <ul class="regions">
+                    <li class="region" data-id="EG">Egypt</li>
+                    <li class="region" data-id="NG">Nigeria</li>
+                    <li class="region" data-id="KE">Kenya</li>
+                    <li class="region" data-id="KR">South Africa</li>
+                </ul>
+            </div>
+            <div class="continent-group">
+                <h3 class="continent-title">America</h3>
+                <ul class="regions">
+                    <li class="region" data-id="BR">Brazil</li>
+                    <li class="region" data-id="Caribbean">Caribbean Islands</li>
+                    <li class="region" data-id="US">United States</li>
+                    <li class="region" data-id="CA">Canada</li>
+                </ul>
+            </div>
+            <div class="continent-group">
+                <h3 class="continent-title">Asia</h3>
+                <ul class="regions">
+                    <li class="region" data-id="JP">Japan</li>
+                    <li class="region" data-id="Koreas">Koreas</li>
+                    <li class="region" data-id="CHT">Chinese subcontinent</li>
+                    <li class="region" data-id="IPB">Indian subcontinent</li>
+                </ul>
+            </div>
+            <div class="continent-group">
+                <h3 class="continent-title">Europe</h3>
+                <ul class="regions">
+                    <li class="region" data-id="UKIE">United Kingdom & Ireland</li>
+                    <li class="region" data-id="DE">Germany</li>
+                    <li class="region" data-id="CH">Switzerland</li>
+                    <li class="region" data-id="FR">France</li>
+                </ul>
+            </div>
+            <div class="continent-group">
+                <h3 class="continent-title">Oceania</h3>
+                <ul class="regions">
+                    <li class="region" data-id="AU">Australia</li>
+                    <li class="region" data-id="ZN">New Zealand</li>
+                </ul>
+            </div>
+        </section>
+        <section class="region-content" data-button="preview-button">
+            <header class="region-header">
+                <div class="region-slide">
+                    <img src="./assets/images/brazil.jpg" alt="Brazil" class="region-image">
+                </div>
+                <h3 class="region-title">Brazil</h3>
+            </header>
+            <main class="region-specific">
+                <ul class="specific-list">
+                    <li class="specific"><strong>Continent: </strong>America</li>
+                    <li class="specific"><strong>Capital: </strong>Brasília</li>
+                    <li class="specific"><strong>Languages: </strong>Portuguese</li>
+                    <li class="specific"><strong>Subject: </strong>Greatings</li>
+                </ul>
+            </main>
+        </section>
+        <button class="start-chapter">
+            <span>Start</span>
+            <div class="start-icon-area">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="start-chapter-icon"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            </div>
+        </button>
+    </aside>
+    <section id="zoom-area">
+        <button class="option" id="plus-zoom">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </button>
+        <button class="option" id="minus-zoom">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </button>
+    </section>
+    <script src="./scripts.js" type="module"></script>
+</body>
+</html>

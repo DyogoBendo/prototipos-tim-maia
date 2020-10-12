@@ -1,0 +1,23 @@
+:root{
+    font-size: 50%;
+
+    --bg-menu: #C4C4C4;
+    --border-color: black;
+    --text-color-darker: black;
+    --text-color-lighter: #3F3F3F;
+    --scroll-color: #3F3F3F;
+    --scroll-color-dark: #2b2b2b;
+    --border-color-lighter: #C4C4C4;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+*, button, input{
+    font-family: 'Museo300';
+}
+@font-face{
+    font-family: 'Museo300';
+    src: url('../fonts/museo300-regular.otf');
+}
