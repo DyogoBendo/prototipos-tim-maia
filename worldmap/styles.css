@@ -35,4 +35,9 @@ body{
 #worldmap-area #map #world .clickable:hover{
     fill: var(--scroll-color);
 }
+#worldmap-area #map #world .clickable.selected{
+    fill: var(--scroll-color)
+}
+
+
 

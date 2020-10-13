@@ -11,8 +11,8 @@ const mouseEvents = {
         const { innerWidth: totalWidth, innerHeight: totalHeight } = window
         
         const [ byX, byY ] = [
-            ((actualX - totalWidth / 2) * 0.1),
-            ((actualY - totalHeight / 2) * 0.1)
+            ((actualX - totalWidth / 2) * 0.05),
+            ((actualY - totalHeight / 2) * 0.05)
         ]
 
         isPressed && scrollBy(byX, byY)
