@@ -23,8 +23,6 @@ const Chapter = (previewButton, startButton, showPreview) => {
     regions.forEach(region => {
         region.addEventListener('click', () => {
             regions.forEach(compRegion => {
-                previewButton.disabled = false
-
                 if(compRegion != region){
                     removeClass(compRegion, 'choosed')
                 }

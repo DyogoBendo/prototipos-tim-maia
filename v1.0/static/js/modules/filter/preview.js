@@ -6,7 +6,7 @@ import { addClass, removeClass} from '../../utils/index.js'
 const createPreviewTemplate = (region) => {
     const {image: { src, alt }, content: { name, continent, capital, languages, subject}} = region
 
-    const isThereMoreThanOne = element => element.lenght > 1
+    const isThereMoreThanOne = element =>  element.length > 1
 
     const content = (`
         <header class="region-header">
@@ -46,6 +46,8 @@ const Preview = (startButton) => {
     }
 
     const showPreview = (regionID) => {
+        previewButton.disabled = false
+        
         if(regionID){
             const dataRegion = data[regionID]
             const selectedRegion = selectRegion(regionID)

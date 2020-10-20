@@ -11,24 +11,22 @@ const Filter = () => {
 
     let lastContentVisibled
 
-    const { regions } = WorldMap()
     const { container: preview, previewButton, hidePreview, showPreview  } = Preview(startButton)
-    const { container: chapter, chapterButton, hideChapters, showChapters} = Chapter(previewButton, startButton, showPreview)
+    const { container: chapter, chapterButton, hideChapters, showChapters} = Chapter(previewButton, startButton ,showPreview)
+    const { onSelectRegion } = WorldMap(showPreview, hideChapters)
+
 
     showChapters()
+    onSelectRegion()
 
     chapterButton.addEventListener('click', () => {
         showChapters()
         hidePreview()
-
-        startButton.style.display = 'none'
     })
 
     previewButton.addEventListener('click', () => {
         showPreview()
         hideChapters()
-
-        startButton.style.display = 'flex'
     })
 
     minimizeButton.addEventListener('click', () => {
@@ -55,10 +53,7 @@ const Filter = () => {
         }
     }) 
 
-    regions.forEach(region => region.addEventListener('click', () => {
-        showPreview(region.id)
-        hideChapters()
-    }))
+    
 }
 
 export default Filter
